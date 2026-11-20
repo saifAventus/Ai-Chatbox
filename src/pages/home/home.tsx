@@ -74,12 +74,12 @@ function Home() {
               </div>
 
               {item.suggestions.length > 0 && (
-                <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap pt-4">
                   {item.suggestions.map((suggestion) => (
                     <button
                       key={suggestion.id}
                       onClick={() => handleSendPrompt(suggestion.name)}
-                      className="border-black border text-black px-2 py-1 rounded-full text-sm hover:bg-black hover:text-white"
+                      className="inline-flex items-center px-4 py-1.5 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-full shadow-sm hover:bg-gray-50 hover:border-gray-300 hover:text-gray-900 hover:shadow transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 active:scale-95 cursor-pointer"
                     >
                       {suggestion.name}
                     </button>
