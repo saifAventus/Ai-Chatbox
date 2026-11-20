@@ -105,17 +105,7 @@ code {
 .gradient-border {
   position: relative;
   border-radius: 999px;
-  background: #f3f4f6;
-}
-
-.gradient-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   padding: 2px;
-  border-radius: inherit;
-  pointer-events: none;
-
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -125,17 +115,8 @@ code {
     #ff0080 80%,
     transparent 100%
   );
-
   background-size: 200% 100%;
   animation: border-trace 30s ease-in-out infinite;
-
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-
-  filter: drop-shadow(0 0 6px rgba(255, 0, 128, 0.4))
-    drop-shadow(0 0 10px rgba(64, 224, 208, 0.3));
 }
 
 .rainbow-spinner {
